@@ -20,7 +20,7 @@
   </feature>
   
    <!-- Core plugins -->
-    <gap:plugin name="com.brodysoft.sqliteplugin"  />
+  
     <gap:plugin name="org.apache.cordova.network-information"  />
     <gap:plugin name="org.apache.cordova.device" />
 
