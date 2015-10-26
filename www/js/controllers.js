@@ -674,7 +674,7 @@ $scope.services = function() {
 									  method: 'POST',
 									  
 									  url:  $rootScope.getServerIp+'AimsAppsConnectivity/RegistrationSV',
-									  params: {clientName:regi.fullname,clientAdd:regi.address,phone: regi.phone,email: regi.email,imei:$cordovaDevice.getUUID()},
+									  params: {clientName:regi.fullname,clientAdd:regi.address,phone: regi.phone,email: regi.email,imei:"1111"},
 									  //type:'JSON',
 									  headers : { 'Content-Type': 'application/json' }
 									}).success(function(data, status, headers, config) {
