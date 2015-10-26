@@ -6,7 +6,7 @@ angular.module('starter.controllers', [])
 .controller('SignInCtrl', function($base64,$ionicPlatform,$scope, $state, $http, $rootScope, $ionicLoading, $timeout,$ionicPopup,$filter,$cordovaSQLite,$cordovaDevice) {
 
  $ionicPlatform.ready(function() {
- 	alert('sing');
+ 
  /*
     if(window.cordova && window.cordova.plugins.Keyboard) {
 
@@ -153,7 +153,7 @@ $scope.user = { uname:'ADMIN'};
 		$http({
 							  method: 'POST',
 							
-							  url:  $rootScope.getServerIp+'AimsAppsConnectivity/LoginErrorCode',
+							  url:  'http://27.147.153.142/AimsAppsConnectivity/LoginErrorCode',
 							  params: {uname:$base64.encode(user.uname),pass:$base64.encode(user.pass),imei:$base64.encode('111')},
 							   //params: {uname:user.uname,pass:user.pass},
 							  
