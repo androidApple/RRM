@@ -153,7 +153,7 @@ $scope.user = { uname:'ADMIN'};
 		$http({
 							  method: 'POST',
 							
-							  url:  'http://27.147.153.142/AimsAppsConnectivity/LoginErrorCode',
+							  url:  'http://27.147.153.142:8084/AimsAppsConnectivity/LoginErrorCode',
 							  params: {uname:$base64.encode(user.uname),pass:$base64.encode(user.pass),imei:$base64.encode('111')},
 							   //params: {uname:user.uname,pass:user.pass},
 							  
