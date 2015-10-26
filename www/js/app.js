@@ -8,6 +8,9 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngCordova','base64'])
 
 
+.run(function($ionicPlatform,  $ionicPopup, $cordovaDevice) {
+ 
+})
 
 
 
