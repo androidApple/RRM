@@ -643,6 +643,7 @@ $scope.services = function() {
 
 
 	$scope.doRegistration=function(regi){
+		alert('imei :'+$cordovaDevice.getUUID());
 	
 		if(!regi || ! regi.fullname){
 		 $ionicPopup.alert({
