@@ -29,6 +29,19 @@ angular.module('starter.controllers', [])
             }
  })
 
+
+  if (window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if (window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+	
+			$ionicPlatform.registerBackButtonAction(function (event) {
+			event.preventDefault();
+			}, 100) 
+			
 //begin ready
 	/*  $ionicPlatform.ready(function() {
    
@@ -153,7 +166,7 @@ $scope.user = { uname:'ADMIN'};
 		$http({
 							  method: 'POST',
 							
-							  url:  'http://27.147.153.142:8084/AimsAppsConnectivity/LoginErrorCode',
+							  url:  $rootScope.getServerIp+'AimsAppsConnectivity/LoginErrorCode',
 							  params: {uname:$base64.encode(user.uname),pass:$base64.encode(user.pass),imei:$base64.encode('111')},
 							   //params: {uname:user.uname,pass:user.pass},
 							  
