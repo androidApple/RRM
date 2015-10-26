@@ -4,6 +4,30 @@ angular.module('starter.controllers', [])
 
 
 .controller('SignInCtrl', function($base64,$ionicPlatform,$scope, $state, $http, $rootScope, $ionicLoading, $timeout,$ionicPopup,$filter,$cordovaSQLite,$cordovaDevice) {
+ $ionicPlatform.ready(function() {
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+
+  //Change this to false to return accessory bar 
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
+    }
+    if(window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+   
+    
+    if(window.Connection) {
+                if(navigator.connection.type == Connection.NONE) {
+                    $ionicPopup.confirm({
+                        title: "Internet Disconnected",
+                        content: "The internet is disconnected on your device. Please Connect Internet"
+                    })
+                    
+                }
+            }
+ })
+
+
 //begin ready
 	/*  $ionicPlatform.ready(function() {
    
