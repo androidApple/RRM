@@ -10,9 +10,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
 
 
 
-.run(function($ionicPlatform,  $ionicPopup/*, $cordovaDevice*/) {
- 
-})
 
 .config(function($stateProvider, $urlRouterProvider) {
 
