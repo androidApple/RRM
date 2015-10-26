@@ -129,7 +129,7 @@ $scope.user = { uname:'ADMIN'};
 							  method: 'POST',
 							
 							  url:  $rootScope.getServerIp+'AimsAppsConnectivity/LoginErrorCode',
-							  params: {uname:$base64.encode(user.uname),pass:$base64.encode(user.pass),imei:$base64.encode('357730057610546')},
+							  params: {uname:$base64.encode(user.uname),pass:$base64.encode(user.pass),imei:$base64.encode($cordovaDevice.getUUID())},
 							   //params: {uname:user.uname,pass:user.pass},
 							  
 							  //type:'JSON',
